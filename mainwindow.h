@@ -19,16 +19,19 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 public slots:
+    //create slots for my memory and processor timers.
     void myRam();
     void myProc();
 
 
 private slots:
+    //create an event for when the quit button is pushed
     void on_pushButton_clicked();
 
 
 
 private:
+    //base items needed like UI windows, htSystem object, and QTimers.
     Ui::MainWindow *ui;
     htSystem mySys;
     QTimer *timerRam;
